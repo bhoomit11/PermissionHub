@@ -13,7 +13,6 @@ import android.util.Log
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.app.ActivityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,12 +25,17 @@ import com.simpleadapter.SimpleAdapter
 class PermissionsActivity : AppCompatActivity() {
 
     companion object {
-        fun createIntent(context: Context): Intent {
-            return Intent(context, PermissionsActivity::class.java)
+        const val PERMISSION_LIST = "PERMISSION_LIST"
+        fun createIntent(context: Context, permissionList: ArrayList<PermissionData>): Intent {
+            return Intent(context, PermissionsActivity::class.java).apply {
+                putParcelableArrayListExtra(PERMISSION_LIST, permissionList)
+            }
         }
     }
 
-    private var permissionList: ArrayList<PermissionData> = arrayListOf()
+    private val permissionList by lazy {
+        getFromIntent<ArrayList<PermissionData>>(PERMISSION_LIST, arrayListOf())
+    }
     private var adapter: SimpleAdapter<PermissionData>? = null
     private val activityResult = registerForActivityResult(ActivityResultContracts.RequestMultiplePermissions()) { permissions ->
         // Handle Permission granted/rejected
@@ -49,7 +53,7 @@ class PermissionsActivity : AppCompatActivity() {
                     adapter?.notifyItemChanged(position)
                 }
                 if (isNeverAskAgain(permissionList[position].permission?.getManifestPermission() ?: "").not()) {
-                    openSettingActivity(permissionList[position].permissionDeniedDesc)
+                    openSettingActivity(permissionList[position].permissionAfterDeniedDesc)
                 }
             } else {
                 // Permission is granted
@@ -109,39 +113,8 @@ class PermissionsActivity : AppCompatActivity() {
         }, R.id.tvPermissionAction)
 
         adapter?.clear()
-        adapter?.addAll(getDummyData())
+        adapter?.addAll(permissionList)
         adapter?.notifyDataSetChanged()
-    }
-
-    private fun getDummyData(): ArrayList<PermissionData> {
-        permissionList = arrayListOf(
-            PermissionData().apply {
-                permissionTitle = "Camera"
-                permissionDesc = "Please allow this permission to use media features of the app"
-                permissionDeniedDesc = "Camera permission required to use the media feature, please allow it from settings!"
-                permission = PermissionName.CAMERA.setCompulsion()
-            },
-            PermissionData().apply {
-                permissionTitle = "Read External Storage"
-                permissionDesc = "Please allow this permission to use media features of the app"
-                permissionDeniedDesc = "Read External Storage permission required to use the media feature, please allow it from settings!"
-                permission = PermissionName.READ_EXTERNAL_STORAGE.setCompulsion()
-            },
-            PermissionData().apply {
-                permissionTitle = "Write External Storage"
-                permissionDesc = "Please allow this permission to use media features of the app"
-                permissionDeniedDesc = "Write External Storage permission required to use the media feature, please allow it from settings!"
-                permission = PermissionName.WRITE_EXTERNAL_STORAGE
-            },
-            PermissionData().apply {
-                permissionTitle = "Record Audio"
-                permissionDesc = "Please allow this permission to use microphone feature of your app"
-                permissionDeniedDesc = "Record Audio permission required to use microphone feature, please allow it from settings!"
-                permission = PermissionName.RECORD_AUDIO.setCompulsion()
-            }
-        )
-
-        return permissionList
     }
 
     private fun openSettingActivity(permissionDeniedDesc: String?) {
