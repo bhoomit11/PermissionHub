@@ -18,14 +18,16 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="App needs Permissions"
+            android:layout_marginHorizontal="20dp"
             android:textColor="@android:color/black"
             android:textSize="22sp"
+            android:gravity="center"
             android:layout_marginTop="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ivLogo" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -54,8 +56,9 @@
             android:id="@+id/tvSKip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="Skip to App"
+            android:layout_marginBottom="16dp"
+            android:textStyle="bold"
+            android:text="@string/skip_to_app"
             android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"

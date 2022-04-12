@@ -7,4 +7,11 @@ data class PermissionData(
     var permissionTitle: String = "",
     var permissionDesc: String = "",
     var permissionDeniedDesc: String = "",
+    var permissionButtonAction: PermissionButtonAction = PermissionButtonAction.ALLOW,
 )
+
+enum class PermissionButtonAction{
+    ALLOW,
+    ALLOWED,
+    DENIED
+}

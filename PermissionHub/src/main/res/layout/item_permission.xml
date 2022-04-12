@@ -40,16 +40,17 @@
             android:paddingRight="10dp"
             android:text="To recieve &amp; answer calls from dieticians"
             app:layout_constraintLeft_toRightOf="@id/ivMic"
-            app:layout_constraintRight_toLeftOf="@id/tvMicAction"
+            app:layout_constraintRight_toLeftOf="@id/tvPermissionAction"
             app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvMicAction"
+            android:id="@+id/tvPermissionAction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/button_gradient_without_padding"
-            android:paddingHorizontal="13dp"
-            android:paddingVertical="9dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp"
+            android:textSize="12sp"
             android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"

@@ -1,1 +1,6 @@
-<resources></resources>
+<resources>
+    <string name="settings">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="skip_to_app"><u>Skip to App</u></string>
+</resources>
