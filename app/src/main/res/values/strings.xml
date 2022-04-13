@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PermissionHub</string>
+    <string name="permission_camera_title">Camera</string>
+    <string name="permission_camera_desc">Please allow this permission to use media features of the app</string>
+    <string name="permission_camera_after_deny_desc">Camera permission required to use the media feature, please allow it from settings!</string>
+    <string name="permission_location_title">Location</string>
+    <string name="permission_location_desc">Please allow this permission to use location features of the app</string>
+    <string name="permission_location_after_deny_desc">Location permission required to use location features of the app, please allow it from settings!</string>
 </resources>

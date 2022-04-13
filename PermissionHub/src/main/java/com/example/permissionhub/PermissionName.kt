@@ -1,524 +1,19 @@
 package com.example.permissionhub
 
 enum class PermissionName {
-    ACCESS_LOCATION_EXTRA_COMMANDS {
+
+    ACCESS_COARSE_LOCATION {
         override fun getManifestPermission(): String {
-            return android.Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+            return android.Manifest.permission.ACCESS_COARSE_LOCATION
         }
 
         override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@ACCESS_LOCATION_EXTRA_COMMANDS
-        }
-    },
-    ACCESS_NETWORK_STATE {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.ACCESS_NETWORK_STATE
-        }
 
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
-            return this@ACCESS_NETWORK_STATE
-        }
-    },
-    ACCESS_NOTIFICATION_POLICY {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.ACCESS_NOTIFICATION_POLICY
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@ACCESS_NOTIFICATION_POLICY
-        }
-    },
-    ACCESS_WIFI_STATE {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.ACCESS_WIFI_STATE
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@ACCESS_WIFI_STATE
-        }
-    },
-    BLUETOOTH {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.BLUETOOTH
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@BLUETOOTH
-        }
-    },
-    BLUETOOTH_ADMIN {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.BLUETOOTH_ADMIN
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@BLUETOOTH_ADMIN
-        }
-    },
-    BROADCAST_STICKY {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.BROADCAST_STICKY
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@BROADCAST_STICKY
-        }
-    },
-    CHANGE_NETWORK_STATE {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.CHANGE_NETWORK_STATE
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@CHANGE_NETWORK_STATE
-        }
-    },
-    CHANGE_WIFI_MULTICAST_STATE {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.CHANGE_WIFI_MULTICAST_STATE
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@CHANGE_WIFI_MULTICAST_STATE
-        }
-    },
-    CHANGE_WIFI_STATE {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.CHANGE_WIFI_STATE
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@CHANGE_WIFI_STATE
-        }
-    },
-    DISABLE_KEYGUARD {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.DISABLE_KEYGUARD
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@DISABLE_KEYGUARD
-        }
-    },
-    EXPAND_STATUS_BAR {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.EXPAND_STATUS_BAR
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@EXPAND_STATUS_BAR
-        }
-    },
-    GET_PACKAGE_SIZE {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.GET_PACKAGE_SIZE
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@GET_PACKAGE_SIZE
-        }
-    },
-    INSTALL_SHORTCUT {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.INSTALL_SHORTCUT
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@INSTALL_SHORTCUT
-        }
-    },
-    INTERNET {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.INTERNET
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@INTERNET
-        }
-    },
-    KILL_BACKGROUND_PROCESSES {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.KILL_BACKGROUND_PROCESSES
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@KILL_BACKGROUND_PROCESSES
-        }
-    },
-    MODIFY_AUDIO_SETTINGS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.MODIFY_AUDIO_SETTINGS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@MODIFY_AUDIO_SETTINGS
-        }
-    },
-    NFC {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.NFC
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@NFC
-        }
-    },
-    READ_SYNC_SETTINGS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.READ_SYNC_SETTINGS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@READ_SYNC_SETTINGS
-        }
-    },
-    READ_SYNC_STATS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.READ_SYNC_STATS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@READ_SYNC_STATS
-        }
-    },
-    RECEIVE_BOOT_COMPLETED {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.RECEIVE_BOOT_COMPLETED
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@RECEIVE_BOOT_COMPLETED
-        }
-    },
-    REORDER_TASKS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.REORDER_TASKS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@REORDER_TASKS
-        }
-    },
-    REQUEST_IGNORE_BATTERY_OPTIMIZATIONS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
-        }
-    },
-    REQUEST_INSTALL_PACKAGES {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.REQUEST_INSTALL_PACKAGES
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@REQUEST_INSTALL_PACKAGES
-        }
-    },
-    SET_ALARM {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.SET_ALARM
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@SET_ALARM
-        }
-    },
-    SET_TIME_ZONE {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.SET_TIME_ZONE
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@SET_TIME_ZONE
-        }
-    },
-    SET_WALLPAPER {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.SET_WALLPAPER
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@SET_WALLPAPER
-        }
-    },
-    SET_WALLPAPER_HINTS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.SET_WALLPAPER_HINTS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@SET_WALLPAPER_HINTS
-        }
-    },
-    TRANSMIT_IR {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.TRANSMIT_IR
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@TRANSMIT_IR
-        }
-    },
-    UNINSTALL_SHORTCUT {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.UNINSTALL_SHORTCUT
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@UNINSTALL_SHORTCUT
-        }
-    },
-    USE_FINGERPRINT {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.USE_FINGERPRINT
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@USE_FINGERPRINT
-        }
-    },
-    VIBRATE {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.VIBRATE
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@VIBRATE
-        }
-    },
-    WAKE_LOCK {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.WAKE_LOCK
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@WAKE_LOCK
-        }
-    },
-    WRITE_SYNC_SETTINGS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.WRITE_SYNC_SETTINGS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@WRITE_SYNC_SETTINGS
-        }
-    },
-    READ_CALENDAR {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.READ_CALENDAR
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@READ_CALENDAR
-        }
-    },
-    WRITE_CALENDAR {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.WRITE_CALENDAR
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@WRITE_CALENDAR
-        }
-    },
-    CAMERA {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.CAMERA
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@CAMERA
-        }
-    },
-    READ_CONTACTS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.READ_CONTACTS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@READ_CONTACTS
-        }
-    },
-    WRITE_CONTACTS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.WRITE_CONTACTS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@WRITE_CONTACTS
-        }
-    },
-    GET_ACCOUNTS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.GET_ACCOUNTS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@GET_ACCOUNTS
+            return this@ACCESS_COARSE_LOCATION
         }
     },
     ACCESS_FINE_LOCATION {
@@ -529,113 +24,10 @@ enum class PermissionName {
         override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
+
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ACCESS_FINE_LOCATION
-        }
-    },
-    ACCESS_COARSE_LOCATION {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.ACCESS_COARSE_LOCATION
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@ACCESS_COARSE_LOCATION
-        }
-    },
-    RECORD_AUDIO {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.RECORD_AUDIO
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@RECORD_AUDIO
-        }
-    },
-    READ_PHONE_STATE {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.READ_PHONE_STATE
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@READ_PHONE_STATE
-        }
-    },
-    READ_PHONE_NUMBERS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.READ_PHONE_NUMBERS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@READ_PHONE_NUMBERS
-        }
-    },
-    CALL_PHONE {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.CALL_PHONE
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@CALL_PHONE
-        }
-    },
-    ANSWER_PHONE_CALLS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.ANSWER_PHONE_CALLS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@ANSWER_PHONE_CALLS
-        }
-    },
-    READ_CALL_LOG {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.READ_CALL_LOG
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@READ_CALL_LOG
-        }
-    },
-    WRITE_CALL_LOG {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.WRITE_CALL_LOG
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@WRITE_CALL_LOG
         }
     },
     ADD_VOICEMAIL {
@@ -646,35 +38,10 @@ enum class PermissionName {
         override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
+
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ADD_VOICEMAIL
-        }
-    },
-    USE_SIP {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.USE_SIP
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@USE_SIP
-        }
-    },
-    PROCESS_OUTGOING_CALLS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.PROCESS_OUTGOING_CALLS
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@PROCESS_OUTGOING_CALLS
         }
     },
     BODY_SENSORS {
@@ -685,74 +52,108 @@ enum class PermissionName {
         override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
+
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@BODY_SENSORS
         }
     },
-    SEND_SMS {
+    CALL_PHONE {
         override fun getManifestPermission(): String {
-            return android.Manifest.permission.SEND_SMS
+            return android.Manifest.permission.CALL_PHONE
         }
 
         override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
+
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
-            return this@SEND_SMS
+            return this@CALL_PHONE
         }
     },
-    RECEIVE_SMS {
+    CAMERA {
         override fun getManifestPermission(): String {
-            return android.Manifest.permission.RECEIVE_SMS
+            return android.Manifest.permission.CAMERA
         }
 
         override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
+
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
-            return this@RECEIVE_SMS
+            return this@CAMERA
         }
     },
-    READ_SMS {
+    GET_ACCOUNTS {
         override fun getManifestPermission(): String {
-            return android.Manifest.permission.READ_SMS
+            return android.Manifest.permission.GET_ACCOUNTS
         }
 
         override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
+
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
-            return this@READ_SMS
+            return this@GET_ACCOUNTS
         }
     },
-    RECEIVE_WAP_PUSH {
+    PROCESS_OUTGOING_CALLS {
         override fun getManifestPermission(): String {
-            return android.Manifest.permission.RECEIVE_WAP_PUSH
+            return android.Manifest.permission.PROCESS_OUTGOING_CALLS
         }
 
         override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
+
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
-            return this@RECEIVE_WAP_PUSH
+            return this@PROCESS_OUTGOING_CALLS
         }
     },
-    RECEIVE_MMS {
+    READ_CALENDAR {
         override fun getManifestPermission(): String {
-            return android.Manifest.permission.RECEIVE_MMS
+            return android.Manifest.permission.READ_CALENDAR
         }
 
         override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
+
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
-            return this@RECEIVE_MMS
+            return this@READ_CALENDAR
+        }
+    },
+    READ_CALL_LOG {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.READ_CALL_LOG
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@READ_CALL_LOG
+        }
+    },
+    READ_CONTACTS {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.READ_CONTACTS
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@READ_CONTACTS
         }
     },
     READ_EXTERNAL_STORAGE {
@@ -763,9 +164,164 @@ enum class PermissionName {
         override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
+
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@READ_EXTERNAL_STORAGE
+        }
+    },
+    READ_PHONE_STATE {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.READ_PHONE_STATE
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@READ_PHONE_STATE
+        }
+    },
+    READ_SMS {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.READ_SMS
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@READ_SMS
+        }
+    },
+    RECEIVE_MMS {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.RECEIVE_MMS
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@RECEIVE_MMS
+        }
+    },
+    RECEIVE_SMS {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.RECEIVE_SMS
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@RECEIVE_SMS
+        }
+    },
+    RECEIVE_WAP_PUSH {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.RECEIVE_WAP_PUSH
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@RECEIVE_WAP_PUSH
+        }
+    },
+    RECORD_AUDIO {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.RECORD_AUDIO
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@RECORD_AUDIO
+        }
+    },
+    SEND_SMS {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.SEND_SMS
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@SEND_SMS
+        }
+    },
+    USE_SIP {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.USE_SIP
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@USE_SIP
+        }
+    },
+    WRITE_CALENDAR {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.WRITE_CALENDAR
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@WRITE_CALENDAR
+        }
+    },
+    WRITE_CALL_LOG {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.WRITE_CALL_LOG
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@WRITE_CALL_LOG
+        }
+    },
+    WRITE_CONTACTS {
+        override fun getManifestPermission(): String {
+            return android.Manifest.permission.WRITE_CONTACTS
+        }
+
+        override fun getRequired(): Boolean {
+            return compulsionFlagValue
+        }
+
+        override fun setRequired(): PermissionName {
+            compulsionFlagValue = true
+            return this@WRITE_CONTACTS
         }
     },
     WRITE_EXTERNAL_STORAGE {
@@ -776,61 +332,10 @@ enum class PermissionName {
         override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
+
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@WRITE_EXTERNAL_STORAGE
-        }
-    },
-    ACCESS_MEDIA_LOCATION {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.ACCESS_MEDIA_LOCATION
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@ACCESS_MEDIA_LOCATION
-        }
-    },
-    ACCEPT_HANDOVER {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.ACCEPT_HANDOVER
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@ACCEPT_HANDOVER
-        }
-    },
-    ACCESS_BACKGROUND_LOCATION {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.ACCESS_BACKGROUND_LOCATION
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@ACCESS_BACKGROUND_LOCATION
-        }
-    },
-    ACTIVITY_RECOGNITION {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.ACTIVITY_RECOGNITION
-        }
-
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@ACTIVITY_RECOGNITION
         }
     };
 

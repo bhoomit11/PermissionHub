@@ -16,18 +16,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun getPermissionConfig(): ArrayList<PermissionConfig> {
         return arrayListOf(
+            PermissionConfig.instance.permission(PermissionName.CAMERA.setRequired()) // add setRequired if permission is must required for your App
+                .title(getString(R.string.permission_camera_title)) // Add permission title to be showed up on permission screen
+                .description(getString(R.string.permission_camera_desc)) // Add permission desc to be showed up on permission screen
+                .afterDeniedDescription(getString(R.string.permission_camera_after_deny_desc)), // Add permission desc to be showed up after permission is denied permanently from user
 
-            PermissionConfig.instance
-                .permission(PermissionName.CAMERA.setRequired()) // add setRequired if permission is must required for your App
-                .title("Camera") // Add permission title to be showed up on permission screen
-                .description("Please allow this permission to use media features of the app") // Add permission desc to be showed up on permission screen
-                .afterDeniedDescription("Camera permission required to use the media feature, please allow it from settings!"), // Add permission desc to be showed up after permission is denied permanently from user
-
-            PermissionConfig.instance
-                .permission(PermissionName.ACCESS_FINE_LOCATION)
-                .title("Location")
-                .description("Please allow this permission to use location features of the app")
-                .afterDeniedDescription("Location permission required to use location features of the app, please allow it from settings!")
+            PermissionConfig.instance.permission(PermissionName.ACCESS_FINE_LOCATION)// add setRequired if permission is must required for your App
+                .title(getString(R.string.permission_location_title))// Add permission title to be showed up on permission screen
+                .description(getString(R.string.permission_location_desc))// Add permission desc to be showed up on permission screen
+                .afterDeniedDescription(getString(R.string.permission_location_after_deny_desc))// Add permission desc to be showed up after permission is denied permanently from user
         )
     }
 }
