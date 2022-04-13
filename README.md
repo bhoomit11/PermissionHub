@@ -37,7 +37,7 @@ PermissionHub.start(
 )
 ```
 
-Here _getPermissionConfig_ will return the list of Permission Config as below
+Here _*getPermissionConfig*_ will return the list of Permission Config as below
 
 ```kotlin
 private fun getPermissionConfig(): ArrayList<PermissionConfig> {
@@ -54,3 +54,8 @@ private fun getPermissionConfig(): ArrayList<PermissionConfig> {
     )
 }
 ```
+Add setRequired after the PermissionName to make this Permission necessary to allow to access you app further<br>
+
+You can add as many as Runtime Permission in Arraylist<PermissionConfig> 
+
+**Important: Don't forget to add those permission in Manifest file of your project**
