@@ -2,6 +2,7 @@ package com.example.permissionhub
 
 import android.os.Parcel
 import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 class PermissionConfig() : Parcelable {
 
@@ -16,33 +17,37 @@ class PermissionConfig() : Parcelable {
     var permissionButtonAction: PermissionButtonAction = PermissionButtonAction.ALLOW
 
     constructor(parcel: Parcel) : this() {
+        permission = parcel.readSerializable() as PermissionName
         permissionTitle = parcel.readString().toString()
         permissionDesc = parcel.readString().toString()
         permissionAfterDeniedDesc = parcel.readString().toString()
         isDenied = parcel.readByte() != 0.toByte()
     }
 
+
     fun permission(permission: PermissionName): PermissionConfig {
         this.permission = permission
-        return instance
+        return this
     }
 
     fun title(permissionTitle: String): PermissionConfig {
         this.permissionTitle = permissionTitle
-        return instance
+        return this
     }
 
     fun description(permissionDesc: String): PermissionConfig {
         this.permissionDesc = permissionDesc
-        return instance
+        return this
     }
 
     fun afterDeniedDescription(permissionAfterDeniedDesc: String): PermissionConfig {
         this.permissionAfterDeniedDesc = permissionAfterDeniedDesc
-        return instance
+        return this
     }
 
+
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeSerializable(permission)
         parcel.writeString(permissionTitle)
         parcel.writeString(permissionDesc)
         parcel.writeString(permissionAfterDeniedDesc)
@@ -54,8 +59,9 @@ class PermissionConfig() : Parcelable {
     }
 
     companion object CREATOR : Parcelable.Creator<PermissionConfig> {
-        val instance: PermissionConfig
-            get() = PermissionConfig()
+        fun get(): PermissionConfig {
+            return PermissionConfig()
+        }
 
         override fun createFromParcel(parcel: Parcel): PermissionConfig {
             return PermissionConfig(parcel)

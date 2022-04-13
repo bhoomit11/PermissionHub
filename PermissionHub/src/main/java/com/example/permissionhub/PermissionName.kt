@@ -1,5 +1,8 @@
 package com.example.permissionhub
 
+import android.os.Parcelable
+import java.io.Serializable
+
 enum class PermissionName {
 
     ACCESS_COARSE_LOCATION {
