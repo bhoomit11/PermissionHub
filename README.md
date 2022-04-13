@@ -1,5 +1,10 @@
 
 # PermissionHub 
+<a class="badge-align" href="https://www.codacy.com/app/bhoomit11/PermissionHub?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bhoomit11/PermissionHub&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/dd28ce7f922d4ad290c804283917f89d"/></a>
+<a href="https://jitpack.io/#bhoomit11/PermissionHub"><img src="https://jitpack.io/v/bhoomit11/PermissionHub/month.svg"/></a>
+<a href="https://jitpack.io/#bhoomit11/PermissionHub"> <img src="https://jitpack.io/v/bhoomit11/PermissionHub.svg" /></a>
+<a href="https://github.com/bhoomit11/PermissionHub/actions"> <img src="https://github.com/bhoomit11/PermissionHub/workflows/Build/badge.svg" /></a>
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"/></a>
 
 Provides ready-to-use interface for all permission to be used on your app with customized title and description defines brief/shot use of given permission.<br>
 
