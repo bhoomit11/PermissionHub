@@ -3,4 +3,6 @@
     <string name="cancel">Cancel</string>
     <string name="permission_required">Permission Required</string>
     <string name="skip_to_app"><u>Skip to App</u></string>
+    <string name="denied">DENIED!</string>
+    <string name="app">App</string>
 </resources>

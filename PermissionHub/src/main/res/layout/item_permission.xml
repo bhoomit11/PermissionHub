@@ -9,54 +9,86 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:layout_marginVertical="4dp"
+        android:layout_marginHorizontal="8dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="4dp"
+        android:translationZ="2dp">
 
-        <ImageView
-            android:id="@+id/ivMic"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@android:drawable/ic_menu_camera"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="@android:color/black" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Microphone"
-            app:layout_constraintLeft_toRightOf="@id/ivMic"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:padding="10dp">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvDescription"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="To recieve &amp; answer calls from dieticians"
-            app:layout_constraintLeft_toRightOf="@id/ivMic"
-            app:layout_constraintRight_toLeftOf="@id/tvPermissionAction"
-            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+            <ImageView
+                android:id="@+id/ivPermissionIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@android:drawable/ic_menu_camera"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvPermissionAction"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_gradient_without_padding"
-            android:paddingHorizontal="10dp"
-            android:paddingVertical="6dp"
-            android:textSize="12sp"
-            android:textColor="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Allow" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@id/ivPermissionIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Microphone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintLeft_toRightOf="@id/ivPermissionIcon"
+                app:layout_constraintRight_toLeftOf="@id/llPermissionAction"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                tools:text="To recieve &amp; answer calls from dieticians" />
+
+            <LinearLayout
+                android:id="@+id/llPermissionAction"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPermissionAction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_gradient_without_padding"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="6dp"
+                    android:minWidth="70dp"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    tools:text="Allowed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDeniedText"
+                    android:layout_marginTop="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    android:text="@string/denied" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </layout>
 
 

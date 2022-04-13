@@ -14,32 +14,20 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-    private fun getPermissionConfig(): ArrayList<PermissionData> {
+    private fun getPermissionConfig(): ArrayList<PermissionConfig> {
         return arrayListOf(
-            PermissionData().apply {
-                permissionTitle = "Camera"
-                permissionDesc = "Please allow this permission to use media features of the app"
-                permissionAfterDeniedDesc = "Camera permission required to use the media feature, please allow it from settings!"
-                permission = PermissionName.CAMERA.setCompulsion()
-            },
-            PermissionData().apply {
-                permissionTitle = "Read External Storage"
-                permissionDesc = "Please allow this permission to use media features of the app"
-                permissionAfterDeniedDesc = "Read External Storage permission required to use the media feature, please allow it from settings!"
-                permission = PermissionName.READ_EXTERNAL_STORAGE.setCompulsion()
-            },
-            PermissionData().apply {
-                permissionTitle = "Write External Storage"
-                permissionDesc = "Please allow this permission to use media features of the app"
-                permissionAfterDeniedDesc = "Write External Storage permission required to use the media feature, please allow it from settings!"
-                permission = PermissionName.WRITE_EXTERNAL_STORAGE
-            },
-            PermissionData().apply {
-                permissionTitle = "Record Audio"
-                permissionDesc = "Please allow this permission to use microphone feature of your app"
-                permissionAfterDeniedDesc = "Record Audio permission required to use microphone feature, please allow it from settings!"
-                permission = PermissionName.RECORD_AUDIO.setCompulsion()
-            }
+
+            PermissionConfig.instance
+                .permission(PermissionName.CAMERA.setRequired()) // add setRequired if permission is must required for your App
+                .title("Camera") // Add permission title to be showed up on permission screen
+                .description("Please allow this permission to use media features of the app") // Add permission desc to be showed up on permission screen
+                .afterDeniedDescription("Camera permission required to use the media feature, please allow it from settings!"), // Add permission desc to be showed up after permission is denied permanently from user
+
+            PermissionConfig.instance
+                .permission(PermissionName.ACCESS_FINE_LOCATION)
+                .title("Location")
+                .description("Please allow this permission to use location features of the app")
+                .afterDeniedDescription("Location permission required to use location features of the app, please allow it from settings!")
         )
     }
 }

@@ -6,10 +6,10 @@ enum class PermissionName {
             return android.Manifest.permission.ACCESS_LOCATION_EXTRA_COMMANDS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ACCESS_LOCATION_EXTRA_COMMANDS
         }
@@ -19,10 +19,10 @@ enum class PermissionName {
             return android.Manifest.permission.ACCESS_NETWORK_STATE
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ACCESS_NETWORK_STATE
         }
@@ -32,10 +32,10 @@ enum class PermissionName {
             return android.Manifest.permission.ACCESS_NOTIFICATION_POLICY
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ACCESS_NOTIFICATION_POLICY
         }
@@ -45,10 +45,10 @@ enum class PermissionName {
             return android.Manifest.permission.ACCESS_WIFI_STATE
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ACCESS_WIFI_STATE
         }
@@ -58,10 +58,10 @@ enum class PermissionName {
             return android.Manifest.permission.BLUETOOTH
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@BLUETOOTH
         }
@@ -71,10 +71,10 @@ enum class PermissionName {
             return android.Manifest.permission.BLUETOOTH_ADMIN
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@BLUETOOTH_ADMIN
         }
@@ -84,10 +84,10 @@ enum class PermissionName {
             return android.Manifest.permission.BROADCAST_STICKY
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@BROADCAST_STICKY
         }
@@ -97,10 +97,10 @@ enum class PermissionName {
             return android.Manifest.permission.CHANGE_NETWORK_STATE
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@CHANGE_NETWORK_STATE
         }
@@ -110,10 +110,10 @@ enum class PermissionName {
             return android.Manifest.permission.CHANGE_WIFI_MULTICAST_STATE
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@CHANGE_WIFI_MULTICAST_STATE
         }
@@ -123,10 +123,10 @@ enum class PermissionName {
             return android.Manifest.permission.CHANGE_WIFI_STATE
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@CHANGE_WIFI_STATE
         }
@@ -136,10 +136,10 @@ enum class PermissionName {
             return android.Manifest.permission.DISABLE_KEYGUARD
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@DISABLE_KEYGUARD
         }
@@ -149,10 +149,10 @@ enum class PermissionName {
             return android.Manifest.permission.EXPAND_STATUS_BAR
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@EXPAND_STATUS_BAR
         }
@@ -162,10 +162,10 @@ enum class PermissionName {
             return android.Manifest.permission.GET_PACKAGE_SIZE
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@GET_PACKAGE_SIZE
         }
@@ -175,10 +175,10 @@ enum class PermissionName {
             return android.Manifest.permission.INSTALL_SHORTCUT
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@INSTALL_SHORTCUT
         }
@@ -188,10 +188,10 @@ enum class PermissionName {
             return android.Manifest.permission.INTERNET
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@INTERNET
         }
@@ -201,10 +201,10 @@ enum class PermissionName {
             return android.Manifest.permission.KILL_BACKGROUND_PROCESSES
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@KILL_BACKGROUND_PROCESSES
         }
@@ -214,10 +214,10 @@ enum class PermissionName {
             return android.Manifest.permission.MODIFY_AUDIO_SETTINGS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@MODIFY_AUDIO_SETTINGS
         }
@@ -227,10 +227,10 @@ enum class PermissionName {
             return android.Manifest.permission.NFC
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@NFC
         }
@@ -240,10 +240,10 @@ enum class PermissionName {
             return android.Manifest.permission.READ_SYNC_SETTINGS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@READ_SYNC_SETTINGS
         }
@@ -253,10 +253,10 @@ enum class PermissionName {
             return android.Manifest.permission.READ_SYNC_STATS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@READ_SYNC_STATS
         }
@@ -266,10 +266,10 @@ enum class PermissionName {
             return android.Manifest.permission.RECEIVE_BOOT_COMPLETED
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@RECEIVE_BOOT_COMPLETED
         }
@@ -279,10 +279,10 @@ enum class PermissionName {
             return android.Manifest.permission.REORDER_TASKS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@REORDER_TASKS
         }
@@ -292,10 +292,10 @@ enum class PermissionName {
             return android.Manifest.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
         }
@@ -305,10 +305,10 @@ enum class PermissionName {
             return android.Manifest.permission.REQUEST_INSTALL_PACKAGES
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@REQUEST_INSTALL_PACKAGES
         }
@@ -318,10 +318,10 @@ enum class PermissionName {
             return android.Manifest.permission.SET_ALARM
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@SET_ALARM
         }
@@ -331,10 +331,10 @@ enum class PermissionName {
             return android.Manifest.permission.SET_TIME_ZONE
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@SET_TIME_ZONE
         }
@@ -344,10 +344,10 @@ enum class PermissionName {
             return android.Manifest.permission.SET_WALLPAPER
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@SET_WALLPAPER
         }
@@ -357,10 +357,10 @@ enum class PermissionName {
             return android.Manifest.permission.SET_WALLPAPER_HINTS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@SET_WALLPAPER_HINTS
         }
@@ -370,10 +370,10 @@ enum class PermissionName {
             return android.Manifest.permission.TRANSMIT_IR
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@TRANSMIT_IR
         }
@@ -383,10 +383,10 @@ enum class PermissionName {
             return android.Manifest.permission.UNINSTALL_SHORTCUT
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@UNINSTALL_SHORTCUT
         }
@@ -396,10 +396,10 @@ enum class PermissionName {
             return android.Manifest.permission.USE_FINGERPRINT
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@USE_FINGERPRINT
         }
@@ -409,10 +409,10 @@ enum class PermissionName {
             return android.Manifest.permission.VIBRATE
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@VIBRATE
         }
@@ -422,10 +422,10 @@ enum class PermissionName {
             return android.Manifest.permission.WAKE_LOCK
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@WAKE_LOCK
         }
@@ -435,10 +435,10 @@ enum class PermissionName {
             return android.Manifest.permission.WRITE_SYNC_SETTINGS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@WRITE_SYNC_SETTINGS
         }
@@ -448,10 +448,10 @@ enum class PermissionName {
             return android.Manifest.permission.READ_CALENDAR
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@READ_CALENDAR
         }
@@ -461,10 +461,10 @@ enum class PermissionName {
             return android.Manifest.permission.WRITE_CALENDAR
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@WRITE_CALENDAR
         }
@@ -474,10 +474,10 @@ enum class PermissionName {
             return android.Manifest.permission.CAMERA
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@CAMERA
         }
@@ -487,10 +487,10 @@ enum class PermissionName {
             return android.Manifest.permission.READ_CONTACTS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@READ_CONTACTS
         }
@@ -500,10 +500,10 @@ enum class PermissionName {
             return android.Manifest.permission.WRITE_CONTACTS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@WRITE_CONTACTS
         }
@@ -513,10 +513,10 @@ enum class PermissionName {
             return android.Manifest.permission.GET_ACCOUNTS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@GET_ACCOUNTS
         }
@@ -526,10 +526,10 @@ enum class PermissionName {
             return android.Manifest.permission.ACCESS_FINE_LOCATION
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ACCESS_FINE_LOCATION
         }
@@ -539,10 +539,10 @@ enum class PermissionName {
             return android.Manifest.permission.ACCESS_COARSE_LOCATION
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ACCESS_COARSE_LOCATION
         }
@@ -552,10 +552,10 @@ enum class PermissionName {
             return android.Manifest.permission.RECORD_AUDIO
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@RECORD_AUDIO
         }
@@ -565,10 +565,10 @@ enum class PermissionName {
             return android.Manifest.permission.READ_PHONE_STATE
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@READ_PHONE_STATE
         }
@@ -578,10 +578,10 @@ enum class PermissionName {
             return android.Manifest.permission.READ_PHONE_NUMBERS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@READ_PHONE_NUMBERS
         }
@@ -591,10 +591,10 @@ enum class PermissionName {
             return android.Manifest.permission.CALL_PHONE
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@CALL_PHONE
         }
@@ -604,10 +604,10 @@ enum class PermissionName {
             return android.Manifest.permission.ANSWER_PHONE_CALLS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ANSWER_PHONE_CALLS
         }
@@ -617,10 +617,10 @@ enum class PermissionName {
             return android.Manifest.permission.READ_CALL_LOG
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@READ_CALL_LOG
         }
@@ -630,10 +630,10 @@ enum class PermissionName {
             return android.Manifest.permission.WRITE_CALL_LOG
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@WRITE_CALL_LOG
         }
@@ -643,10 +643,10 @@ enum class PermissionName {
             return android.Manifest.permission.ADD_VOICEMAIL
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ADD_VOICEMAIL
         }
@@ -656,10 +656,10 @@ enum class PermissionName {
             return android.Manifest.permission.USE_SIP
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@USE_SIP
         }
@@ -669,10 +669,10 @@ enum class PermissionName {
             return android.Manifest.permission.PROCESS_OUTGOING_CALLS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@PROCESS_OUTGOING_CALLS
         }
@@ -682,10 +682,10 @@ enum class PermissionName {
             return android.Manifest.permission.BODY_SENSORS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@BODY_SENSORS
         }
@@ -695,10 +695,10 @@ enum class PermissionName {
             return android.Manifest.permission.SEND_SMS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@SEND_SMS
         }
@@ -708,10 +708,10 @@ enum class PermissionName {
             return android.Manifest.permission.RECEIVE_SMS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@RECEIVE_SMS
         }
@@ -721,10 +721,10 @@ enum class PermissionName {
             return android.Manifest.permission.READ_SMS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@READ_SMS
         }
@@ -734,10 +734,10 @@ enum class PermissionName {
             return android.Manifest.permission.RECEIVE_WAP_PUSH
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@RECEIVE_WAP_PUSH
         }
@@ -747,10 +747,10 @@ enum class PermissionName {
             return android.Manifest.permission.RECEIVE_MMS
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@RECEIVE_MMS
         }
@@ -760,10 +760,10 @@ enum class PermissionName {
             return android.Manifest.permission.READ_EXTERNAL_STORAGE
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@READ_EXTERNAL_STORAGE
         }
@@ -773,10 +773,10 @@ enum class PermissionName {
             return android.Manifest.permission.WRITE_EXTERNAL_STORAGE
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@WRITE_EXTERNAL_STORAGE
         }
@@ -786,10 +786,10 @@ enum class PermissionName {
             return android.Manifest.permission.ACCESS_MEDIA_LOCATION
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ACCESS_MEDIA_LOCATION
         }
@@ -799,10 +799,10 @@ enum class PermissionName {
             return android.Manifest.permission.ACCEPT_HANDOVER
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ACCEPT_HANDOVER
         }
@@ -812,10 +812,10 @@ enum class PermissionName {
             return android.Manifest.permission.ACCESS_BACKGROUND_LOCATION
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ACCESS_BACKGROUND_LOCATION
         }
@@ -825,23 +825,17 @@ enum class PermissionName {
             return android.Manifest.permission.ACTIVITY_RECOGNITION
         }
 
-        override fun getCompulsion(): Boolean {
+        override fun getRequired(): Boolean {
             return compulsionFlagValue
         }
-        override fun setCompulsion(): PermissionName {
+        override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@ACTIVITY_RECOGNITION
         }
     };
 
     abstract fun getManifestPermission(): String
-    abstract fun setCompulsion(): PermissionName
-    abstract fun getCompulsion(): Boolean
+    abstract fun setRequired(): PermissionName
+    abstract fun getRequired(): Boolean
     protected var compulsionFlagValue = false
-}
-
-class PermissionEnum {
-    fun abc() {
-        var a = PermissionName.ACTIVITY_RECOGNITION.setCompulsion()
-    }
 }
