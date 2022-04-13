@@ -58,4 +58,12 @@ Add setRequired after the PermissionName to make this Permission necessary to al
 
 You can add as many as Runtime Permission in Arraylist<PermissionConfig> 
 
-**Important: Don't forget to add those permission in Manifest file of your project**
+**Important: Don't forget to add those permission in Manifest file of your project**<br>
+
+Here in my case I have added this 2 in my manifest, 
+
+```xml
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+```
