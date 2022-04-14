@@ -32,6 +32,10 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@ACCESS_FINE_LOCATION
         }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_location
+        }
     },
     ADD_VOICEMAIL {
         override fun getManifestPermission(): String {
@@ -87,6 +91,10 @@ enum class PermissionName {
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@CAMERA
+        }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_camera
         }
     },
     GET_ACCOUNTS {
@@ -343,6 +351,9 @@ enum class PermissionName {
     };
 
     abstract fun getManifestPermission(): String
+    open fun getPermissionIconResource(): Int{
+        return -1
+    }
     abstract fun setRequired(): PermissionName
     abstract fun getRequired(): Boolean
     protected var compulsionFlagValue = false

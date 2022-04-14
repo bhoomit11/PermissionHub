@@ -74,3 +74,12 @@ Here in my case I have added this 2 in my manifest,
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 ```
+
+Wanna know a cool thing about the PermissionHub?<br>
+It will automatically fetch your project's theme accent color to make this page looks like more a part of your project<br>
+However you can give a custom color as will for all/each icons.<br>
+
+Permission hub provides runtime permission icons by default but you can add your own icons as well.
+
+Happy Coding :)
+Any feedback would be appreciated, if I am missing any Runtime permission please post the issue!

@@ -5,18 +5,21 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
-import android.content.res.Resources
+import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
-import androidx.annotation.Nullable
+import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.view.ContextThemeWrapper
 import androidx.core.app.ActivityCompat
+import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.permissionhub.databinding.ActivityPermissionsBinding
@@ -113,7 +116,20 @@ class PermissionsActivity : AppCompatActivity() {
             binding.tvDeniedText.visibility = if (model.isDenied && !hasPermission) View.VISIBLE else View.GONE
             binding.tvTitle.text = model.permissionTitle
             binding.tvDescription.text = model.permissionDesc
-            binding.ivPermissionIcon.setImageResource(getPermissionDrawable(model.permission?.getManifestPermission() ?: ""))
+
+            if (model.permissionIconResource != -1) {
+                binding.ivPermissionIcon.setImageResource(model.permissionIconResource)
+            } else {
+                binding.ivPermissionIcon.setImageResource(model.permission?.getPermissionIconResource() ?: -1)
+            }
+
+            if (model.iconThemeColorResource != -1) {
+                binding.tvPermissionAction.backgroundTintList = ColorStateList.valueOf(getColor(model.iconThemeColorResource))
+                binding.ivPermissionIcon.imageTintList = ColorStateList.valueOf(getColor(model.iconThemeColorResource))
+            } else {
+                changeSingleIconTheme(binding.ivPermissionIcon, model.permission?.getPermissionIconResource() ?: -1)
+
+            }
         }
 
         binding.rvPermission.adapter = adapter
@@ -168,8 +184,6 @@ class PermissionsActivity : AppCompatActivity() {
             }
             if (index == permissionList.size) {
                 finish()
-            } else {
-
             }
         }
     }
@@ -204,19 +218,19 @@ class PermissionsActivity : AppCompatActivity() {
         }
     }
 
-    @Nullable
-    private fun getPermissionDrawable(permission: String): Int {
-        var drawable: Int? = -1
+    private fun changeSingleIconTheme(imageView: ImageView, @DrawableRes drawableId: Int) {
+
         try {
-            val info = packageManager.getPermissionInfo(permission, PackageManager.GET_META_DATA)
-            drawable = info.icon
-        } catch (e: PackageManager.NameNotFoundException) {
-            e.printStackTrace()
-        } catch (e: Resources.NotFoundException) {
+            val packageInfo = packageManager.getPackageInfo(packageName, PackageManager.GET_META_DATA)
+            val theme = packageInfo.applicationInfo.theme
+            val wrapper = ContextThemeWrapper(this, theme)
+            val drawable = ResourcesCompat.getDrawable(resources, drawableId, wrapper.theme)
+
+            imageView.setImageDrawable(drawable)
+        } catch (e: java.lang.Exception) {
             e.printStackTrace()
         }
-        return drawable ?: -1
-    }
 
+    }
 }
 

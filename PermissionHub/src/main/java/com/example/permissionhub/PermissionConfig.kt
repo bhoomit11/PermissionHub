@@ -11,6 +11,8 @@ class PermissionConfig() : Parcelable {
     var permissionTitle: String = ""
     var permissionDesc: String = ""
     var permissionAfterDeniedDesc: String = ""
+    var permissionIconResource: Int = -1
+    var iconThemeColorResource: Int = -1
 
     // Library internal Params
     var isDenied: Boolean = false
@@ -21,6 +23,8 @@ class PermissionConfig() : Parcelable {
         permissionTitle = parcel.readString().toString()
         permissionDesc = parcel.readString().toString()
         permissionAfterDeniedDesc = parcel.readString().toString()
+        permissionIconResource = parcel.readInt()
+        iconThemeColorResource = parcel.readInt()
         isDenied = parcel.readByte() != 0.toByte()
     }
 
@@ -45,12 +49,24 @@ class PermissionConfig() : Parcelable {
         return this
     }
 
+    fun iconResource(permissionIconResource: Int): PermissionConfig {
+        this.permissionIconResource = permissionIconResource
+        return this
+    }
+
+    fun iconColorResource(iconThemeColorResource: Int): PermissionConfig {
+        this.iconThemeColorResource = iconThemeColorResource
+        return this
+    }
+
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeSerializable(permission)
         parcel.writeString(permissionTitle)
         parcel.writeString(permissionDesc)
         parcel.writeString(permissionAfterDeniedDesc)
+        parcel.writeInt(permissionIconResource)
+        parcel.writeInt(iconThemeColorResource)
         parcel.writeByte(if (isDenied) 1 else 0)
     }
 

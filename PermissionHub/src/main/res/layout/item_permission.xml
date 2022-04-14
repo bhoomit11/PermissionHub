@@ -23,11 +23,11 @@
             android:layout_height="wrap_content"
             android:padding="10dp">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivPermissionIcon"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@android:drawable/ic_menu_camera"
+                tools:src="@android:drawable/ic_menu_camera"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
