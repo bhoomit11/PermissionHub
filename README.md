@@ -29,7 +29,7 @@ allprojects {
 Step 2. Add the dependency
 ```java
 dependencies {
-    implementation 'com.github.bhoomit11:PermissionHub:0.0.1'
+    implementation 'com.github.bhoomit11:PermissionHub:1.0.0'
 }
 ```
 ## How to use the library?
