@@ -150,7 +150,6 @@ class PermissionsActivity : AppCompatActivity() {
         adapter?.notifyDataSetChanged()
     }
 
-
     private fun openSettingActivity(permissionDeniedDesc: String?) {
         DialogUtils.showSimpleDialog(
             activity = this@PermissionsActivity,
@@ -167,9 +166,7 @@ class PermissionsActivity : AppCompatActivity() {
             },
             noText = getString(R.string.cancel)
         )
-
     }
-
 
     override fun onResume() {
         super.onResume()

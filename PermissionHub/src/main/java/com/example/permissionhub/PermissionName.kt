@@ -18,6 +18,10 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@ACCESS_COARSE_LOCATION
         }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_location
+        }
     },
     ACCESS_FINE_LOCATION {
         override fun getManifestPermission(): String {
@@ -50,6 +54,10 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@ADD_VOICEMAIL
         }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_voicemail
+        }
     },
     BODY_SENSORS {
         override fun getManifestPermission(): String {
@@ -64,6 +72,10 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@BODY_SENSORS
         }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_directions
+        }
     },
     CALL_PHONE {
         override fun getManifestPermission(): String {
@@ -77,6 +89,10 @@ enum class PermissionName {
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@CALL_PHONE
+        }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_call
         }
     },
     CAMERA {
@@ -110,19 +126,9 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@GET_ACCOUNTS
         }
-    },
-    PROCESS_OUTGOING_CALLS {
-        override fun getManifestPermission(): String {
-            return android.Manifest.permission.PROCESS_OUTGOING_CALLS
-        }
 
-        override fun getRequired(): Boolean {
-            return compulsionFlagValue
-        }
-
-        override fun setRequired(): PermissionName {
-            compulsionFlagValue = true
-            return this@PROCESS_OUTGOING_CALLS
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_person
         }
     },
     READ_CALENDAR {
@@ -138,6 +144,10 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@READ_CALENDAR
         }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_calendar
+        }
     },
     READ_CALL_LOG {
         override fun getManifestPermission(): String {
@@ -151,6 +161,10 @@ enum class PermissionName {
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@READ_CALL_LOG
+        }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_perm_phone
         }
     },
     READ_CONTACTS {
@@ -166,6 +180,10 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@READ_CONTACTS
         }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_person
+        }
     },
     READ_EXTERNAL_STORAGE {
         override fun getManifestPermission(): String {
@@ -180,6 +198,11 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@READ_EXTERNAL_STORAGE
         }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_storage
+        }
+
     },
     READ_PHONE_STATE {
         override fun getManifestPermission(): String {
@@ -193,6 +216,10 @@ enum class PermissionName {
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@READ_PHONE_STATE
+        }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_call
         }
     },
     READ_SMS {
@@ -208,6 +235,10 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@READ_SMS
         }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_sms
+        }
     },
     RECEIVE_MMS {
         override fun getManifestPermission(): String {
@@ -221,6 +252,10 @@ enum class PermissionName {
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@RECEIVE_MMS
+        }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_mms
         }
     },
     RECEIVE_SMS {
@@ -236,6 +271,10 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@RECEIVE_SMS
         }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_sms
+        }
     },
     RECEIVE_WAP_PUSH {
         override fun getManifestPermission(): String {
@@ -249,6 +288,9 @@ enum class PermissionName {
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@RECEIVE_WAP_PUSH
+        }
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_sms
         }
     },
     RECORD_AUDIO {
@@ -264,6 +306,9 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@RECORD_AUDIO
         }
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_mic_none
+        }
     },
     SEND_SMS {
         override fun getManifestPermission(): String {
@@ -278,6 +323,10 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@SEND_SMS
         }
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_sms
+        }
+
     },
     USE_SIP {
         override fun getManifestPermission(): String {
@@ -291,6 +340,10 @@ enum class PermissionName {
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@USE_SIP
+        }
+
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_call
         }
     },
     WRITE_CALENDAR {
@@ -306,6 +359,9 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@WRITE_CALENDAR
         }
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_calendar
+        }
     },
     WRITE_CALL_LOG {
         override fun getManifestPermission(): String {
@@ -319,6 +375,9 @@ enum class PermissionName {
         override fun setRequired(): PermissionName {
             compulsionFlagValue = true
             return this@WRITE_CALL_LOG
+        }
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_perm_phone
         }
     },
     WRITE_CONTACTS {
@@ -334,6 +393,9 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@WRITE_CONTACTS
         }
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_person
+        }
     },
     WRITE_EXTERNAL_STORAGE {
         override fun getManifestPermission(): String {
@@ -348,12 +410,16 @@ enum class PermissionName {
             compulsionFlagValue = true
             return this@WRITE_EXTERNAL_STORAGE
         }
+        override fun getPermissionIconResource(): Int {
+            return R.drawable.ic_outline_call
+        }
     };
 
     abstract fun getManifestPermission(): String
-    open fun getPermissionIconResource(): Int{
+    open fun getPermissionIconResource(): Int {
         return -1
     }
+
     abstract fun setRequired(): PermissionName
     abstract fun getRequired(): Boolean
     protected var compulsionFlagValue = false

@@ -6,11 +6,15 @@
         <entry key="PermissionHub/src/main/res/drawable/button_gradient_without_padding.xml" value="0.1905" />
         <entry key="PermissionHub/src/main/res/drawable/ic_outline_camera.xml" value="0.189" />
         <entry key="PermissionHub/src/main/res/drawable/ic_outline_location.xml" value="0.189" />
+        <entry key="PermissionHub/src/main/res/drawable/ic_outline_perm_phone.xml" value="0.189" />
+        <entry key="PermissionHub/src/main/res/drawable/ic_outline_person.xml" value="0.189" />
+        <entry key="PermissionHub/src/main/res/drawable/ic_timesheet.xml" value="0.189" />
         <entry key="PermissionHub/src/main/res/drawable/ic_twotone_camera.xml" value="0.189" />
         <entry key="PermissionHub/src/main/res/drawable/ic_twotone_location.xml" value="0.189" />
         <entry key="PermissionHub/src/main/res/layout/activity_permission.xml" value="0.35520833333333335" />
         <entry key="PermissionHub/src/main/res/layout/activity_permissions.xml" value="0.27870370370370373" />
         <entry key="PermissionHub/src/main/res/layout/item_permission.xml" value="0.30648148148148147" />
+        <entry key="app/src/main/res/drawable/ic_outline_person.xml" value="0.189" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27870370370370373" />
       </map>
     </option>
