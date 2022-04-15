@@ -4,6 +4,6 @@
     <corners
         android:radius="16dp"/>
     <solid
-        android:color="@color/cardview_dark_background"/>
+        android:color="?attr/colorAccent"/>
 
 </shape>
