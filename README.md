@@ -80,7 +80,14 @@ Wanna know a cool thing about the PermissionHub?<br>
 It will automatically fetch your project's theme accent color to make this page looks like more a part of your project<br>
 However you can give a custom color as will for all/each icons.<br>
 
-Permission hub provides runtime permission icons by default but you can add your own icons as well.
-
+Permission hub provides runtime permission icons by default but you can add your own icons as well.<br>
+```kotlin
+PermissionConfig.get().permission(PermissionName.CAMERA.setRequired()) // add setRequired if permission is must required for your App
+    .title(getString(R.string.permission_camera_title)) // Add permission title to be showed up on permission screen
+    .description(getString(R.string.permission_camera_desc)) // Add permission desc to be showed up on permission screen
+    .afterDeniedDescription(getString(R.string.permission_camera_after_deny_desc)) // Add permission desc to be showed up after permission is denied permanently from user
+    .iconResource(R.drawable.ic_outline_camera_new) // Optional: Add permission icon resource to add your own icon on permission screen, default material icon is already there in library
+    .iconColorResource(R.color.purple_700), // Optional: Add theme color to be appliend on list screen, by default library will take default accent color of root project
+```
 Happy Coding :)
 Any feedback would be appreciated, if I am missing any Runtime permission please post the issue!
