@@ -10,7 +10,7 @@ Provides ready-to-use interface for all permission to be used on your app with c
 
 Provides listing interface above your application handled with all cases in-build (Allowed,Denied,Always Denied)<br>
 
-<img src="https://github.com/bhoomit11/PermissionHub/master/screenshot/Screenshot_20220415_142207.png?raw=true" />
+<img src="https://github.com/bhoomit11/PermissionHub/main/screenshot/Screenshot_20220415_142207.png?raw=true" />
 
 ## How to integrate into your app?
 Integrating the library into you app is extremely easy. A few changes in the build gradle and your all ready to user Runtime permissions library. Make the following changes to build.gradle inside you app.
