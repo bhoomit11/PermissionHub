@@ -87,7 +87,23 @@ PermissionConfig.get().permission(PermissionName.CAMERA.setRequired()) // add se
     .description(getString(R.string.permission_camera_desc)) // Add permission desc to be showed up on permission screen
     .afterDeniedDescription(getString(R.string.permission_camera_after_deny_desc)) // Add permission desc to be showed up after permission is denied permanently from user
     .iconResource(R.drawable.ic_outline_camera_new) // Optional: Add permission icon resource to add your own icon on permission screen, default material icon is already there in library
-    .iconColorResource(R.color.purple_700), // Optional: Add theme color to be appliend on list screen, by default library will take default accent color of root project
+    .iconColorResource(R.color.purple_700) // Optional: Add theme color to be appliend on list screen, by default library will take default accent color of root project
 ```
-Happy Coding :)
+Happy Coding :)<br>
 Any feedback would be appreciated, if I am missing any Runtime permission please post the issue!
+
+### License
+```
+Copyright 2021 The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.```
