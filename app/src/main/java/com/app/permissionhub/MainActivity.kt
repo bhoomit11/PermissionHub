@@ -1,7 +1,10 @@
-package com.example.permissionhub
+package com.app.permissionhub
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.permissionhub.PermissionConfig
+import com.example.permissionhub.PermissionHub
+import com.example.permissionhub.PermissionName
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -9,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         PermissionHub.start(
-            activity = this@MainActivity,
+            activity = this,
             permissionConfig = getPermissionConfig()
         )
     }
@@ -20,20 +23,14 @@ class MainActivity : AppCompatActivity() {
                 .title(getString(R.string.permission_camera_title)) // Add permission title to be showed up on permission screen
                 .description(getString(R.string.permission_camera_desc)) // Add permission desc to be showed up on permission screen
                 .afterDeniedDescription(getString(R.string.permission_camera_after_deny_desc)), // Add permission desc to be showed up after permission is denied permanently from user
-
-
             PermissionConfig.get().permission(PermissionName.ACCESS_FINE_LOCATION)// add setRequired if permission is must required for your App
                 .title(getString(R.string.permission_location_title))// Add permission title to be showed up on permission screen
                 .description(getString(R.string.permission_location_desc))// Add permission desc to be showed up on permission screen
                 .afterDeniedDescription(getString(R.string.permission_location_after_deny_desc)), // Add permission desc to be showed up after permission is denied permanently from user
             PermissionConfig.get().permission(PermissionName.RECORD_AUDIO)// add setRequired if permission is must required for your App
-                .title(getString(R.string.permission_location_title))// Add permission title to be showed up on permission screen
-                .description(getString(R.string.permission_location_desc))// Add permission desc to be showed up on permission screen
-                .afterDeniedDescription(getString(R.string.permission_location_after_deny_desc)), // Add permission desc to be showed up after permission is denied permanently from user
-            PermissionConfig.get().permission(PermissionName.READ_CONTACTS)// add setRequired if permission is must required for your App
-                .title(getString(R.string.permission_location_title))// Add permission title to be showed up on permission screen
-                .description(getString(R.string.permission_location_desc))// Add permission desc to be showed up on permission screen
-                .afterDeniedDescription(getString(R.string.permission_location_after_deny_desc)), // Add permission desc to be showed up after permission is denied permanently from user
+                .title(getString(R.string.permission_record_title))// Add permission title to be showed up on permission screen
+                .description(getString(R.string.permission_record_desc))// Add permission desc to be showed up on permission screen
+                .afterDeniedDescription(getString(R.string.permission_record_after_deny_desc)), // Add permission desc to be showed up after permission is denied permanently from user
 
         )
     }

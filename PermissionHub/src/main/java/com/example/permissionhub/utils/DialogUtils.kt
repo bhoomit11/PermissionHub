@@ -3,7 +3,6 @@ package com.example.permissionhub.utils
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.DialogInterface
-import androidx.fragment.app.DialogFragment
 
 object DialogUtils {
 

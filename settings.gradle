@@ -16,4 +16,3 @@ dependencyResolutionManagement {
 rootProject.name = "PermissionHub"
 include ':app'
 include ':PermissionHub'
-include ':vectormaster'

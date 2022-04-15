@@ -1,4 +1,4 @@
-package com.example.permissionhub
+package com.app.permissionhub
 
 import org.junit.Test
 

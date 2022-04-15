@@ -128,7 +128,6 @@ class PermissionsActivity : AppCompatActivity() {
                 binding.ivPermissionIcon.imageTintList = ColorStateList.valueOf(getColor(model.iconThemeColorResource))
             } else {
                 changeSingleIconTheme(binding.ivPermissionIcon, model.permission?.getPermissionIconResource() ?: -1)
-
             }
         }
 
