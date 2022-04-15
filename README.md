@@ -1,6 +1,7 @@
 
 # PermissionHub 
-<a class="badge-align" href="https://www.codacy.com/app/bhoomit11/PermissionHub?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bhoomit11/PermissionHub&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/dd28ce7f922d4ad290c804283917f89d"/></a>
+
+[comment]: <> (<a class="badge-align" href="https://www.codacy.com/app/bhoomit11/PermissionHub?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bhoomit11/PermissionHub&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/dd28ce7f922d4ad290c804283917f89d"/></a>)
 <a href="https://jitpack.io/#bhoomit11/PermissionHub"><img src="https://jitpack.io/v/bhoomit11/PermissionHub/month.svg"/></a>
 <a href="https://jitpack.io/#bhoomit11/PermissionHub"> <img src="https://jitpack.io/v/bhoomit11/PermissionHub.svg" /></a>
 <a href="https://github.com/bhoomit11/PermissionHub/actions"> <img src="https://github.com/bhoomit11/PermissionHub/workflows/Build/badge.svg" /></a>
